@@ -11,7 +11,7 @@ const Bars = (props: BarProps) => {
   const { data, dimesions } = props;
   const xScale = d3
     .scaleBand<number>()
-    .domain(data.map((d, dNdx) => dNdx))
+    .domain(data.map((_, dNdx) => dNdx))
     .range([0, dimesions.width]);
   const yScale = d3.scaleLinear().domain([0, 1]).range([0, dimesions.height]);
 
